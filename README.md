@@ -6,9 +6,11 @@ The Jupyter notebook contained in this repository contains a proof of concept fo
 
 ## Functionality
 The associated code does the following:
-- Import a set of tweets from a .csv file, formatted to include the text of the tweets, data for encoded language, and date of composition. The functions tolerate additional data for potential associated analysis (e.g. geospatial data, user, etc.)
-- Separate tweets by date
-- Clean text: remove case, URLs, @mentions, non-hashtag punctuation, non-hashtag '#', encoded HTML, non-hashtag numbers, remove repeated characters in excess of three
+- Imports a set of tweets from a .csv file, formatted to include the text of the tweets, data for encoded language, and date of composition. The functions tolerate additional data for potential associated analysis (e.g. geospatial data, user, etc.)
+- Separates tweets by date.
+- Cleans text: removing case, URLs, @mentions, non-hashtag punctuation, non-hashtag '#', encoded HTML, non-hashtag numbers, remove repeated characters in excess of three.
+- Uses a Porter stemmer to reduce words to stems.
+- Removes stopwords.
 - Defines four vector comparison functions:
 - - Mean Cosine Similarity
 - - Sum Cosine Similarity Over Square Root of Length
